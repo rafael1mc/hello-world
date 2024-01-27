@@ -32,7 +32,7 @@ func main() {
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World2!")
+	fmt.Fprintf(w, "Hello, World5!")
 }
 
 func connectDB() (*sqlx.DB, error) {

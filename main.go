@@ -12,14 +12,17 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting program")
 	godotenv.Load()
 
+	/*
 	db, err := connectDB()
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer db.Close()
 	fmt.Println("Connected to database")
+ 	*/
 
 	http.HandleFunc("/", Handler)
 	envPort := os.Getenv("API_PORT")

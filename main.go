@@ -12,14 +12,17 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting program")
 	godotenv.Load()
 
+	/*
 	db, err := connectDB()
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer db.Close()
 	fmt.Println("Connected to database")
+ 	*/
 
 	http.HandleFunc("/", Handler)
 	envPort := os.Getenv("API_PORT")
@@ -32,7 +35,7 @@ func main() {
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World5!")
+	fmt.Fprintf(w, "Hello, World6!")
 }
 
 func connectDB() (*sqlx.DB, error) {
